@@ -1,7 +1,7 @@
 package com.inventary.india.controller;
 
-import com.inventary.india.model.request.UserDetailsRequestDto;
-import com.inventary.india.model.response.UserDetailsResponseDto;
+import com.inventary.india.model.request.UserDetailRequestDto;
+import com.inventary.india.model.response.UserDetailResponseDto;
 import com.inventary.india.service.UserServiceinterface;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,33 +18,33 @@ public class UserController {
 
     //create user
     @PostMapping("/createUser")
-    public ResponseEntity<UserDetailsResponseDto> createUserFirstTime(@RequestBody UserDetailsRequestDto userDetailsRequestDto){
-        UserDetailsResponseDto userResponse =userServiceinterface.createUser(userDetailsRequestDto);
+    public ResponseEntity<UserDetailResponseDto> createUserFirstTime(@RequestBody UserDetailRequestDto userDetailsRequestDto){
+        UserDetailResponseDto userResponse =userServiceinterface.createUser(userDetailsRequestDto);
        return new ResponseEntity<>(userResponse, HttpStatus.CREATED);
     }
 
 
     //update user
     @PutMapping("/updateUserDetails/{userId}")
-    public ResponseEntity<UserDetailsResponseDto> updateUserDetails(@PathVariable Long userId , @RequestBody UserDetailsRequestDto userDetailsRequestDto)
+    public ResponseEntity<UserDetailResponseDto> updateUserDetails(@PathVariable Long userId , @RequestBody UserDetailRequestDto userDetailsRequestDto)
     {
-        UserDetailsResponseDto userResponse = userServiceinterface.updateUserDetails(userId,userDetailsRequestDto);
+        UserDetailResponseDto userResponse = userServiceinterface.updateUserDetails(userId,userDetailsRequestDto);
         return new ResponseEntity<>(userResponse, HttpStatus.OK);
     }
 
     //disable user(soft delete)
     @PutMapping("/disableUserDetails/{userId}")
-    public ResponseEntity<UserDetailsResponseDto> disableUserDetails( @PathVariable Long userId )
+    public ResponseEntity<UserDetailResponseDto> disableUserDetails(@PathVariable Long userId )
     {
-        UserDetailsResponseDto userResponse = userServiceinterface.disableUserDetails(userId);
+        UserDetailResponseDto userResponse = userServiceinterface.disableUserDetails(userId);
         return new ResponseEntity<>(userResponse, HttpStatus.OK);
     }
 
-    //delete user(soft delete)
+    //delete user(complete delete)
     @DeleteMapping ("/deleteUserDetails/{userId}")
-    public ResponseEntity<UserDetailsResponseDto>  deleteUserDetails( @PathVariable Long userId )
+    public ResponseEntity<UserDetailResponseDto>  deleteUserDetails(@PathVariable Long userId )
     {
-        UserDetailsResponseDto userResponse = userServiceinterface.deleteUserDetails(userId);
+        UserDetailResponseDto userResponse = userServiceinterface.deleteUserDetails(userId);
         return new ResponseEntity<>(userResponse, HttpStatus.OK);
     }
 }

@@ -1,15 +1,14 @@
 package com.inventary.india.service;
 
-import com.inventary.india.model.UserDetails;
-import com.inventary.india.model.request.UserDetailsRequestDto;
-import com.inventary.india.model.response.UserDetailsResponseDto;
+import com.inventary.india.model.request.UserDetailRequestDto;
+import com.inventary.india.model.response.UserDetailResponseDto;
 
 public interface UserServiceinterface {
-    UserDetailsResponseDto createUser(UserDetailsRequestDto userDetails);
+    UserDetailResponseDto createUser(UserDetailRequestDto userDetails);
 
-    UserDetailsResponseDto updateUserDetails(Long userId, UserDetailsRequestDto userDetails);
+    UserDetailResponseDto updateUserDetails(Long userId, UserDetailRequestDto userDetails);
 
-    UserDetailsResponseDto disableUserDetails(Long userId);
+    UserDetailResponseDto disableUserDetails(Long userId);
 
-    UserDetailsResponseDto deleteUserDetails(Long userId);
+    UserDetailResponseDto deleteUserDetails(Long userId);
 }
