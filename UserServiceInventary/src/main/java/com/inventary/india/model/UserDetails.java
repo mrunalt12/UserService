@@ -19,6 +19,8 @@ public class UserDetails implements Serializable {
     private String mobile;
     private  String password;
     private String confirmPassword;
+    private String userAddress;
+    private String userCity;
     @Enumerated(EnumType.STRING)
     private Status status;
 }

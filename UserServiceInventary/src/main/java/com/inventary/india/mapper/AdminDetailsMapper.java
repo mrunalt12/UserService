@@ -15,7 +15,7 @@ public interface AdminDetailsMapper {
     @Mapping(target = "adminMobile",source = "adminMobile")
     AdminDetail toEntity(AdminDetailRequestDto adminDetailsRequest);
 
-    @Mapping(target = "adminId", source = "adminId")
+
     @Mapping(target = "adminName" ,source = "adminName")
     @Mapping(target = "adminEmail" ,source = "adminEmail")
     @Mapping(target = "adminMobile",source = "adminMobile")
