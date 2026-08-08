@@ -1,6 +1,6 @@
 package com.inventary.india.service;
 
-import com.inventary.india.Constant;
+import com.inventary.india.constants.Constant;
 import com.inventary.india.mapper.UserDetailsMapper;
 import com.inventary.india.model.Status;
 import com.inventary.india.model.UserDetails;

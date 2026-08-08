@@ -1,4 +1,4 @@
-package com.inventary.india;
+package com.inventary.india.constants;
 
 public class Constant {
     public static final String ADMIN_CREATED="Admin is created Successfully";
