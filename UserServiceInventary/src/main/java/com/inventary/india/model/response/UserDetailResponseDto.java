@@ -12,10 +12,11 @@ import java.io.Serializable;
 @Getter
 @Data
 public class UserDetailResponseDto implements Serializable {
-    private String userId;
     private String UserName;
     private String email;
     private String mobile;
+    private String userAddress;
+    private String userCity;
     private Status status;
     private  String Description;
 

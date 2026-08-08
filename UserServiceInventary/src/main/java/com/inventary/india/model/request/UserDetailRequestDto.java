@@ -13,4 +13,6 @@ public class UserDetailRequestDto {
     private String mobile;
     private  String password;
     private String confirmPassword;
+    private String userAddress;
+    private String userCity;
 }
